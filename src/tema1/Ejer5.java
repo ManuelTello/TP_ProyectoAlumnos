@@ -7,7 +7,7 @@ public class Ejer5 {
         int[][] clientes = new int[5][4];
         int[]valoraciones = new int[4];
         String[] textos = new String[4];
-        int total,valoracion;
+        int valoracion;
         
         GeneradorAleatorio.iniciar();
         
