@@ -1,0 +1,44 @@
+package tema3;
+
+public class Autor {
+    private String nombre;
+    
+    private String biografia;
+    
+    private String origen;
+    
+    public Autor(String nombre, String biografia, String origen){
+        this.nombre = nombre;
+        this.biografia = biografia;
+        this.origen = origen;
+    }
+	
+    public String getNombre(){
+        return this.nombre;
+    }
+	
+    public String getBiografria(){
+        return this.biografia;
+    }
+	
+    public String getOrigen(){
+        return this.origen;
+    }
+	
+    public void setNombre(String nombre){
+	this.nombre = nombre;
+    }
+	
+    public void setBiografia(String biografia){
+	this.biografia = biografia;
+    }
+	
+    public void setOrigen(String origen){
+        this.origen = origen;
+    }
+    
+    @Override
+    public String toString(){
+        return this.nombre + ", " + this.biografia + ", " + this.origen;
+    }
+}
