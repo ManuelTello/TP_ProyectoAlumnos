@@ -20,23 +20,23 @@ public class Triangulo {
     }
     
     public String getRelleno(){
-        return this.relleno;
+        return relleno;
     }
     
     public String getColorLinea(){
-        return this.colorLinea;
+        return colorLinea;
     }
     
     public double getLado1(){
-        return this.lado1;
+        return lado1;
     }
        
     public double getLado2(){
-        return this.lado2;
+        return lado2;
     }
         
     public double getLado3(){
-        return this.lado3;
+        return lado3;
     }       
     
     public void setRelleno(String relleno){
@@ -48,24 +48,24 @@ public class Triangulo {
     }
     
     public void setLado1(double lado){
-        this.lado1 = lado;
+        lado1 = lado;
     }
     
     public void setLado2(double lado){
-        this.lado2 = lado;
+        lado2 = lado;
     }
         
     public void setLado3(double lado){
-        this.lado3 = lado;
+        lado3 = lado;
     }
     
     public double calcularPerimetro(){
-        return this.lado1 + this.lado2 + this.lado3;
+        return lado1 + lado2 + lado3;
     }
     
     public double calcularArea(){
-        double s = this.calcularPerimetro() / 2;
-        return Math.sqrt(s * (s - this.lado1) * (s -this.lado2) * (s - this.lado3));
+        double s = calcularPerimetro() / 2;
+        return Math.sqrt(s * (s - lado1) * (s - lado2) * (s - lado3));
     }
 }
 

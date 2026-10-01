@@ -14,15 +14,15 @@ public class Cliente {
     }
     
     public String getNombre(){
-        return this.nombre;
+        return nombre;
     }
     
     public int getDni(){
-        return this.dni;
+        return dni;
     }
     
     public int getEdad(){
-        return this.edad;
+        return edad;
     }
     
     public void setNombre(String nombre){
@@ -39,6 +39,6 @@ public class Cliente {
     
     @Override
     public String toString(){
-        return "nombre " + this.nombre + ", edad " + this.edad + ", dni " + this.dni;
+        return "nombre " + nombre + ", edad " + edad + ", dni " + dni;
     }
 }

@@ -6,32 +6,36 @@ public class Estante {
     private Libro[] libros;
     
     public Estante(){
-        this.lugarActual = 0;
-        this.libros = new Libro[20];
+        lugarActual = 0;
+        libros = new Libro[20];
         for(int i = 0; i < 20; i++){
-            this.libros[i] = null;
+            libros[i] = null;
         }
     }
     
     public int cantidadLibros(){
-        return this.lugarActual;
+        return lugarActual;
     }
     
     public boolean estaLleno(){
-        return (this.lugarActual == 20);
+        return (lugarActual == 20);
     }
     
     public void agregarLibro(Libro libro){
-        this.libros[this.lugarActual] = libro;
-        this.lugarActual ++;
+        if(lugarActual == 20){
+            System.out.println("No se puede agregar mas libros a esta estanteria.");
+        }else{
+            libros[lugarActual] = libro;
+            lugarActual ++;  
+        }
     }
     
     public Libro buscarLibro(String titulo){
         int indice = 0;
         boolean existe = false;
 
-        while(indice < (this.lugarActual) && !existe){
-            if(this.libros[indice].getTitulo().equals(titulo)){
+        while(indice < (lugarActual) && !existe){
+            if(libros[indice].getTitulo().equals(titulo)){
                 existe = true;
             }else{
                 indice++;
@@ -39,7 +43,7 @@ public class Estante {
         }
         
         if(existe){
-            return this.libros[indice];
+            return libros[indice];
         }else{
             return null;
         }

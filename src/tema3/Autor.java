@@ -14,15 +14,15 @@ public class Autor {
     }
 	
     public String getNombre(){
-        return this.nombre;
+        return nombre;
     }
 	
     public String getBiografria(){
-        return this.biografia;
+        return biografia;
     }
 	
     public String getOrigen(){
-        return this.origen;
+        return origen;
     }
 	
     public void setNombre(String nombre){
@@ -39,6 +39,6 @@ public class Autor {
     
     @Override
     public String toString(){
-        return this.nombre + ", " + this.biografia + ", " + this.origen;
+        return nombre + ", " + biografia + ", " + origen;
     }
 }

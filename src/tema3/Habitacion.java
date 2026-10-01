@@ -6,56 +6,52 @@ public class Habitacion {
     private boolean estaOcupada;
     
     public Cliente cliente;
-    
-    public Habitacion(double costo, boolean estaOcupada, Cliente cliente){
-        this.costo = costo;
-        this.estaOcupada = estaOcupada;
-        this.cliente = cliente;
-    }
-    
+   
     public Habitacion(double costo){
         this.costo = costo;
-        this.estaOcupada = false;
-        this.cliente = null;
+        estaOcupada = false;
+        cliente = null;
     }
     
     public double getCosto(){
-        return this.costo;
+        return costo;
     }
     
     public boolean getEstaOcupada(){
-        return this.estaOcupada;
+        return estaOcupada;
     }
     
     public Cliente getCliente(){
-        return this.cliente;
+        return cliente;
     }
     
-    public void setCosto(double costo){
-        this.costo = costo;
-    } 
-    
-    public void setEstaOcupada(boolean estaOcupada){
-        this.estaOcupada = estaOcupada;
+    public void aumentarCosto(double costo){
+        this.costo += costo;
     }
     
-    public void setCliente(Cliente cliente){
+    public void ocupar(Cliente cliente){
         this.cliente = cliente;
+        estaOcupada = true;
+    }
+    
+    public void desocupar(){
+        estaOcupada = false;
+        cliente = null;
     }
     
     @Override
     public String toString(){
         String estado = null;
         
-        if(this.estaOcupada){
+        if(estaOcupada){
             estado = "ocupada";
         }else{
             estado = "libre";
         }
         
-        String completo = "esta " + estado + ", $" + this.costo;
-        if(this.cliente != null){
-            completo = completo + ", " + this.cliente.toString();
+        String completo = "esta " + estado + ", $" + costo;
+        if(cliente != null){
+            completo = completo + ", " + cliente.toString();
         }
         
         return completo;

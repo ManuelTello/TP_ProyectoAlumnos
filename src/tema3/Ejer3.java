@@ -21,10 +21,5 @@ public class Ejer3 {
         estante.agregarLibro(libro5);
         
         System.out.println("Autor del libro Mujercita es " + estante.buscarLibro("Mujercita").getPrimerAutor().getNombre());
-        
-        /*
-            Deberia tener una variable de instacia que limite la cantidad maxima 
-            o puede ser una constante que se pueda pasar por instancia
-        */
     } 
 }

@@ -14,15 +14,15 @@ public class Circulo {
     }
     
     public double getRadio(){
-        return this.radio;
+        return radio;
     }
     
     public String getRelleno(){
-        return this.relleno;
+        return relleno;
     }
     
     public String getColorLinea(){
-        return this.colorLinea;
+        return colorLinea;
     }
     
     public void setRadio(double radio){
@@ -38,10 +38,10 @@ public class Circulo {
     }
     
     public double calcularPerimetro(){
-        return 2 * Math.PI * this.radio;
+        return 2 * Math.PI * radio;
     }
     
     public double calcularArea(){
-        return Math.PI * (this.radio * 2);
+        return Math.PI * (radio * 2);
     }
 }
